@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77D475331ACC8FFF0059ECF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475321ACC8FFF0059ECF7 /* main.m */; };
+		77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475351ACC8FFF0059ECF7 /* AppDelegate.m */; };
+		77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475381ACC8FFF0059ECF7 /* ViewController.m */; };
+		77D4753C1ACC8FFF0059ECF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */; };
+		77D4753E1ACC8FFF0059ECF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */; };
+		77D475411ACC8FFF0059ECF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */; };
+		77D4754D1ACC8FFF0059ECF7 /* NeuroplasticityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4754C1ACC8FFF0059ECF7 /* NeuroplasticityTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77D475471ACC8FFF0059ECF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77D475251ACC8FFF0059ECF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D4752C1ACC8FFF0059ECF7;
+			remoteInfo = Neuroplasticity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77D4752D1ACC8FFF0059ECF7 /* Neuroplasticity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuroplasticity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D475311ACC8FFF0059ECF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D475321ACC8FFF0059ECF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77D475341ACC8FFF0059ECF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77D475351ACC8FFF0059ECF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77D475371ACC8FFF0059ECF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77D475381ACC8FFF0059ECF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77D4753B1ACC8FFF0059ECF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		77D475401ACC8FFF0059ECF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		77D475461ACC8FFF0059ECF7 /* NeuroplasticityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuroplasticityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D4754B1ACC8FFF0059ECF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D4754C1ACC8FFF0059ECF7 /* NeuroplasticityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroplasticityTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77D4752A1ACC8FFF0059ECF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D475431ACC8FFF0059ECF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77D475241ACC8FFF0059ECF7 = {
+			isa = PBXGroup;
+			children = (
+				77D4752F1ACC8FFF0059ECF7 /* Neuroplasticity */,
+				77D475491ACC8FFF0059ECF7 /* NeuroplasticityTests */,
+				77D4752E1ACC8FFF0059ECF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77D4752E1ACC8FFF0059ECF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D4752D1ACC8FFF0059ECF7 /* Neuroplasticity.app */,
+				77D475461ACC8FFF0059ECF7 /* NeuroplasticityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D4752F1ACC8FFF0059ECF7 /* Neuroplasticity */ = {
+			isa = PBXGroup;
+			children = (
+				77D475341ACC8FFF0059ECF7 /* AppDelegate.h */,
+				77D475351ACC8FFF0059ECF7 /* AppDelegate.m */,
+				77D475371ACC8FFF0059ECF7 /* ViewController.h */,
+				77D475381ACC8FFF0059ECF7 /* ViewController.m */,
+				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
+				77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */,
+				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
+				77D475301ACC8FFF0059ECF7 /* Supporting Files */,
+			);
+			path = Neuroplasticity;
+			sourceTree = "<group>";
+		};
+		77D475301ACC8FFF0059ECF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77D475311ACC8FFF0059ECF7 /* Info.plist */,
+				77D475321ACC8FFF0059ECF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77D475491ACC8FFF0059ECF7 /* NeuroplasticityTests */ = {
+			isa = PBXGroup;
+			children = (
+				77D4754C1ACC8FFF0059ECF7 /* NeuroplasticityTests.m */,
+				77D4754A1ACC8FFF0059ECF7 /* Supporting Files */,
+			);
+			path = NeuroplasticityTests;
+			sourceTree = "<group>";
+		};
+		77D4754A1ACC8FFF0059ECF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77D4754B1ACC8FFF0059ECF7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77D4752C1ACC8FFF0059ECF7 /* Neuroplasticity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D475501ACC8FFF0059ECF7 /* Build configuration list for PBXNativeTarget "Neuroplasticity" */;
+			buildPhases = (
+				77D475291ACC8FFF0059ECF7 /* Sources */,
+				77D4752A1ACC8FFF0059ECF7 /* Frameworks */,
+				77D4752B1ACC8FFF0059ECF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Neuroplasticity;
+			productName = Neuroplasticity;
+			productReference = 77D4752D1ACC8FFF0059ECF7 /* Neuroplasticity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77D475451ACC8FFF0059ECF7 /* NeuroplasticityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D475531ACC8FFF0059ECF7 /* Build configuration list for PBXNativeTarget "NeuroplasticityTests" */;
+			buildPhases = (
+				77D475421ACC8FFF0059ECF7 /* Sources */,
+				77D475431ACC8FFF0059ECF7 /* Frameworks */,
+				77D475441ACC8FFF0059ECF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77D475481ACC8FFF0059ECF7 /* PBXTargetDependency */,
+			);
+			name = NeuroplasticityTests;
+			productName = NeuroplasticityTests;
+			productReference = 77D475461ACC8FFF0059ECF7 /* NeuroplasticityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77D475251ACC8FFF0059ECF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "David Monson";
+				TargetAttributes = {
+					77D4752C1ACC8FFF0059ECF7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					77D475451ACC8FFF0059ECF7 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 77D4752C1ACC8FFF0059ECF7;
+					};
+				};
+			};
+			buildConfigurationList = 77D475281ACC8FFF0059ECF7 /* Build configuration list for PBXProject "Neuroplasticity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77D475241ACC8FFF0059ECF7;
+			productRefGroup = 77D4752E1ACC8FFF0059ECF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D4752C1ACC8FFF0059ECF7 /* Neuroplasticity */,
+				77D475451ACC8FFF0059ECF7 /* NeuroplasticityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77D4752B1ACC8FFF0059ECF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D4753C1ACC8FFF0059ECF7 /* Main.storyboard in Resources */,
+				77D475411ACC8FFF0059ECF7 /* LaunchScreen.xib in Resources */,
+				77D4753E1ACC8FFF0059ECF7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D475441ACC8FFF0059ECF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77D475291ACC8FFF0059ECF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */,
+				77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */,
+				77D475331ACC8FFF0059ECF7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D475421ACC8FFF0059ECF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D4754D1ACC8FFF0059ECF7 /* NeuroplasticityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77D475481ACC8FFF0059ECF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77D4752C1ACC8FFF0059ECF7 /* Neuroplasticity */;
+			targetProxy = 77D475471ACC8FFF0059ECF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77D4753B1ACC8FFF0059ECF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77D475401ACC8FFF0059ECF7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77D4754E1ACC8FFF0059ECF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		77D4754F1ACC8FFF0059ECF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77D475511ACC8FFF0059ECF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Neuroplasticity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77D475521ACC8FFF0059ECF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Neuroplasticity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		77D475541ACC8FFF0059ECF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeuroplasticityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neuroplasticity.app/Neuroplasticity";
+			};
+			name = Debug;
+		};
+		77D475551ACC8FFF0059ECF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeuroplasticityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neuroplasticity.app/Neuroplasticity";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77D475281ACC8FFF0059ECF7 /* Build configuration list for PBXProject "Neuroplasticity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D4754E1ACC8FFF0059ECF7 /* Debug */,
+				77D4754F1ACC8FFF0059ECF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D475501ACC8FFF0059ECF7 /* Build configuration list for PBXNativeTarget "Neuroplasticity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D475511ACC8FFF0059ECF7 /* Debug */,
+				77D475521ACC8FFF0059ECF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		77D475531ACC8FFF0059ECF7 /* Build configuration list for PBXNativeTarget "NeuroplasticityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D475541ACC8FFF0059ECF7 /* Debug */,
+				77D475551ACC8FFF0059ECF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77D475251ACC8FFF0059ECF7 /* Project object */;
+}
