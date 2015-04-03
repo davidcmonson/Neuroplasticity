@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PursuitsViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    
+    NSError *error;
+    
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[bundle URLForResource:@"Activity" withExtension:@"json"]] options:NSJSONReadingAllowFragments error:&error];
+    
+    PursuitsViewController *viewController = [[PursuitsViewController alloc] initWithActivity:[array firstObject]];
+    
+    self.window.rootViewController = viewController;
+    
     return YES;
 }
 
