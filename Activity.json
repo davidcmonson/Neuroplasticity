@@ -1,15 +1,15 @@
  [{
     "name" : "Pursuits",
     "identifier" : 1,
-    "movementDirection" : 4,
+    "movementDirection" : 5,
     "targetType" : 0,
-    "dotColor" : 3,
-    "dotSize" : 4,
-    "speed" : 8,
+    "dotColor" : 0,
+    "dotSize" : 0   ,
+    "speed" : 5,
     "sunusoidal" : false,
     "repetitions" : 3,
     "initialPause" : 1,
     "finalPause" : 3,
     "startPosition" : -4,
-    "endPosition" : 4
+    "endPosition" : 8
   }]

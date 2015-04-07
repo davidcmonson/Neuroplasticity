@@ -98,19 +98,19 @@ static NSString * const endPositionKey = @"endPosition";
     
     switch (chosenDotSize) {
         case DotSizeSmallest:
-            circleSize = self.view.frame.size.height/50;
+            circleSize = self.view.frame.size.height/30;
             break;
         case DotSizeSmall:
-            circleSize = self.view.frame.size.height/45;
+            circleSize = self.view.frame.size.height/25;
             break;
         case DotSizeMedium:
-            circleSize = self.view.frame.size.height/40;
+            circleSize = self.view.frame.size.height/22;
             break;
         case DotSizeLarge:
-            circleSize = self.view.frame.size.height/35;
+            circleSize = self.view.frame.size.height/20;
             break;
         case DotSizeLargest:
-            circleSize = self.view.frame.size.height/30;
+            circleSize = self.view.frame.size.height/18;
             break;
     }
     
@@ -143,17 +143,18 @@ static NSString * const endPositionKey = @"endPosition";
     // circle animation
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGFloat circleOffset = circleSize/2;
     
-    CGPoint topLeft = CGPointMake(0, 0);
-    CGPoint topCenter = CGPointMake(self.view.center.x, 0);
-    CGPoint topRight = CGPointMake(self.view.frame.size.width, 0);
+    CGPoint topLeft = CGPointMake(0 + circleOffset, 0 + circleOffset);
+    CGPoint topCenter = CGPointMake(self.view.center.x, 0 + circleOffset);
+    CGPoint topRight = CGPointMake(self.view.frame.size.width - circleOffset, 0 + circleOffset);
     
-    CGPoint leftMiddle = CGPointMake(0, self.view.center.y);
-    CGPoint rightMiddle = CGPointMake(self.view.frame.size.width, self.view.center.y);
+    CGPoint leftMiddle = CGPointMake(0, self.view.center.y - circleOffset);
+    CGPoint rightMiddle = CGPointMake(self.view.frame.size.width - circleSize, self.view.center.y - circleOffset);
     
-    CGPoint bottomLeft = CGPointMake(0, self.view.frame.size.height);
-    CGPoint bottomCenter = CGPointMake(self.view.center.x, self.view.frame.size.height);
-    CGPoint bottomRight = CGPointMake(self.view.frame.size.width, self.view.frame.size.height);
+    CGPoint bottomLeft = CGPointMake(0 + circleOffset, self.view.frame.size.height - circleOffset);
+    CGPoint bottomCenter = CGPointMake(self.view.center.x - circleOffset, self.view.frame.size.height - circleSize);
+    CGPoint bottomRight = CGPointMake(self.view.frame.size.width - circleSize, self.view.frame.size.height - circleSize);
     
     CGPoint startLocation;
     CGPoint endLocation;

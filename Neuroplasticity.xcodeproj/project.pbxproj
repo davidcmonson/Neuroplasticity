@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		77D251DA1ACF3C110010B190 /* Activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D251D91ACF3C110010B190 /* Activity.json */; };
 		77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D251DC1ACF3D050010B190 /* PursuitsViewController.m */; };
+		77D251E01AD227670010B190 /* OPKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D251DF1AD227670010B190 /* OPKViewController.m */; };
 		77D475331ACC8FFF0059ECF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475321ACC8FFF0059ECF7 /* main.m */; };
 		77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475351ACC8FFF0059ECF7 /* AppDelegate.m */; };
 		77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475381ACC8FFF0059ECF7 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 		77D251D91ACF3C110010B190 /* Activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Activity.json; sourceTree = "<group>"; };
 		77D251DB1ACF3D050010B190 /* PursuitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PursuitsViewController.h; sourceTree = "<group>"; };
 		77D251DC1ACF3D050010B190 /* PursuitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PursuitsViewController.m; sourceTree = "<group>"; };
+		77D251DE1AD227670010B190 /* OPKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPKViewController.h; sourceTree = "<group>"; };
+		77D251DF1AD227670010B190 /* OPKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPKViewController.m; sourceTree = "<group>"; };
 		77D4752D1ACC8FFF0059ECF7 /* Neuroplasticity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuroplasticity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D475311ACC8FFF0059ECF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77D475321ACC8FFF0059ECF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				77D475381ACC8FFF0059ECF7 /* ViewController.m */,
 				77D251DB1ACF3D050010B190 /* PursuitsViewController.h */,
 				77D251DC1ACF3D050010B190 /* PursuitsViewController.m */,
+				77D251DE1AD227670010B190 /* OPKViewController.h */,
+				77D251DF1AD227670010B190 /* OPKViewController.m */,
 				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
 				77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */,
 				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
@@ -231,6 +236,7 @@
 				77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */,
 				77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */,
 				77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */,
+				77D251E01AD227670010B190 /* OPKViewController.m in Sources */,
 				77D475331ACC8FFF0059ECF7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
