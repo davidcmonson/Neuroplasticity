@@ -21,15 +21,15 @@
     // Do any additional setup after loading the view.
     
     UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(- self.view.frame.size.width, - self.view.frame.size.height, self.view.frame.size.width * 3, self.view.frame.size.height * 3)];
-    [giantView setBackgroundColor:[UIColor whiteColor]];
-    double rads = DEGREES_TO_RADIANS(-90);
+
+    double rads = DEGREES_TO_RADIANS(-45);
     giantView.transform = CGAffineTransformMakeRotation(rads);
     
-    
-    CGFloat rectangleWidth = giantView.bounds.size.width / 20;
-    UIColor *backgroundColor = [UIColor blueColor];
-    
-    
+    [giantView setBackgroundColor:[UIColor whiteColor]];
+    CGFloat rectangleWidth = giantView.bounds.size.width / 25;
+    UIColor *backgroundColor = [UIColor redColor];
+    float totalRepeats = 500.0;
+    float duration = 5;
     
     for (int rectangleStartingPoint = 0; rectangleStartingPoint < giantView.bounds.size.width; (rectangleStartingPoint += rectangleWidth * 2)) {
         UIView *rectangleView = [[UIView alloc] initWithFrame:CGRectMake(giantView.bounds.origin.x, giantView.bounds.origin.y, rectangleWidth, giantView.bounds.size.height)];
@@ -41,9 +41,9 @@
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
         [animation setFromValue:[NSValue valueWithCGPoint:CGPointMake(giantView.bounds.origin.x + rectangleStartingPoint, giantView.bounds.size.height/2)]];
         [animation setToValue:[NSValue valueWithCGPoint:CGPointMake(giantView.bounds.origin.x + rectangleStartingPoint + rectangleWidth * 2, giantView.bounds.size.height/2)]];
-        CGFloat animationDuration = 5; // 11 based on 1-10 inverted scale
+        CGFloat animationDuration = duration; // 11 based on 1-10 inverted scale
         [animation setDuration:animationDuration];
-        animation.repeatCount = 5;
+        animation.repeatCount = totalRepeats;
         [rectangleView.layer addAnimation:animation forKey:@"position"];
     }
 

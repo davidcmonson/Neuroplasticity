@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77792ACC1AD5E73300D078EB /* Cartesian CrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ACB1AD5E73300D078EB /* Cartesian CrossViewController.m */; };
+		777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777DFCC51AD4806C00ADC571 /* HemistimViewController.m */; };
 		77D251DA1ACF3C110010B190 /* Activity.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D251D91ACF3C110010B190 /* Activity.json */; };
 		77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D251DC1ACF3D050010B190 /* PursuitsViewController.m */; };
 		77D251E01AD227670010B190 /* OPKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D251DF1AD227670010B190 /* OPKViewController.m */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77792ACA1AD5E73300D078EB /* Cartesian CrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cartesian CrossViewController.h"; sourceTree = "<group>"; };
+		77792ACB1AD5E73300D078EB /* Cartesian CrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cartesian CrossViewController.m"; sourceTree = "<group>"; };
+		777DFCC41AD4806C00ADC571 /* HemistimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HemistimViewController.h; path = ../HemistimViewController.h; sourceTree = "<group>"; };
+		777DFCC51AD4806C00ADC571 /* HemistimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HemistimViewController.m; path = ../HemistimViewController.m; sourceTree = "<group>"; };
 		77D251D91ACF3C110010B190 /* Activity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Activity.json; sourceTree = "<group>"; };
 		77D251DB1ACF3D050010B190 /* PursuitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PursuitsViewController.h; sourceTree = "<group>"; };
 		77D251DC1ACF3D050010B190 /* PursuitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PursuitsViewController.m; sourceTree = "<group>"; };
@@ -68,6 +74,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		777DFCC71AD4807800ADC571 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				777DFCC41AD4806C00ADC571 /* HemistimViewController.h */,
+				777DFCC51AD4806C00ADC571 /* HemistimViewController.m */,
+				77792ACA1AD5E73300D078EB /* Cartesian CrossViewController.h */,
+				77792ACB1AD5E73300D078EB /* Cartesian CrossViewController.m */,
+				77D251DB1ACF3D050010B190 /* PursuitsViewController.h */,
+				77D251DC1ACF3D050010B190 /* PursuitsViewController.m */,
+				77D251DE1AD227670010B190 /* OPKViewController.h */,
+				77D251DF1AD227670010B190 /* OPKViewController.m */,
+			);
+			name = Exercises;
+			sourceTree = "<group>";
+		};
 		77D475241ACC8FFF0059ECF7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +115,7 @@
 				77D475351ACC8FFF0059ECF7 /* AppDelegate.m */,
 				77D475371ACC8FFF0059ECF7 /* ViewController.h */,
 				77D475381ACC8FFF0059ECF7 /* ViewController.m */,
-				77D251DB1ACF3D050010B190 /* PursuitsViewController.h */,
-				77D251DC1ACF3D050010B190 /* PursuitsViewController.m */,
-				77D251DE1AD227670010B190 /* OPKViewController.h */,
-				77D251DF1AD227670010B190 /* OPKViewController.m */,
+				777DFCC71AD4807800ADC571 /* Exercises */,
 				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
 				77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */,
 				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
@@ -233,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */,
 				77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */,
+				77792ACC1AD5E73300D078EB /* Cartesian CrossViewController.m in Sources */,
 				77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */,
 				77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */,
 				77D251E01AD227670010B190 /* OPKViewController.m in Sources */,
