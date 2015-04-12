@@ -25,13 +25,12 @@
     UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(-self.view.frame.size.width, 0, self.view.frame.size.width *3, self.view.frame.size.height)];
     
     
-    //adjustable values////////////////////////////////////
-    [giantView setBackgroundColor:[UIColor yellowColor]];//
-    UIColor *rectangleColor = [UIColor blueColor];       //
-    float totalRepeats = 500.0;                          //
-    float duration = 2;                                  //
-    int numberOfRectangles = 20;                         //
-    ///////////////////////////////////////////////////////
+    [giantView setBackgroundColor:[UIColor yellowColor]];
+    UIColor *rectangleColor = [UIColor blueColor];
+    float totalRepeats = 500.0;
+    float duration = 2;
+    int numberOfRectangles = 20;
+
     
     
     int columns = numberOfRectangles;
