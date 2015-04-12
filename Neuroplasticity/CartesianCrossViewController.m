@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 David Monson. All rights reserved.
 //
 
-#import "Cartesian CrossViewController.h"
+#import "CartesianCrossViewController.h"
 
-@interface Cartesian_CrossViewController ()
+@interface CartesianCrossViewController ()
 
 @end
 
-@implementation Cartesian_CrossViewController
+@implementation CartesianCrossViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

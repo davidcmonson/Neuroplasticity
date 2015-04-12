@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Cartesian_CrossViewController : UIViewController
+@interface CartesianCrossViewController : UIViewController
 
 @end
