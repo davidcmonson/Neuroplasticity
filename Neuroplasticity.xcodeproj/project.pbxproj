@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773E972D1ADF1CE700C8C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773E972C1ADF1CE700C8C1B5 /* Images.xcassets */; };
 		77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */; };
 		77792AD71AD8668000D078EB /* SessionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD61AD8668000D078EB /* SessionsTableViewController.m */; };
 		77792ADA1AD8696A00D078EB /* ExercisePlaylistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */; };
@@ -31,9 +32,8 @@
 		77D251E01AD227670010B190 /* OPKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D251DF1AD227670010B190 /* OPKViewController.m */; };
 		77D475331ACC8FFF0059ECF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475321ACC8FFF0059ECF7 /* main.m */; };
 		77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475351ACC8FFF0059ECF7 /* AppDelegate.m */; };
-		77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475381ACC8FFF0059ECF7 /* ViewController.m */; };
+		77D475391ACC8FFF0059ECF7 /* ViewingDistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D475381ACC8FFF0059ECF7 /* ViewingDistanceViewController.m */; };
 		77D4753C1ACC8FFF0059ECF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */; };
-		77D4753E1ACC8FFF0059ECF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */; };
 		77D475411ACC8FFF0059ECF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */; };
 		77D4754D1ACC8FFF0059ECF7 /* NeuroplasticityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D4754C1ACC8FFF0059ECF7 /* NeuroplasticityTests.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		773E972C1ADF1CE700C8C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartesianCrossViewController.h; sourceTree = "<group>"; };
 		77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartesianCrossViewController.m; sourceTree = "<group>"; };
 		77792AD51AD8668000D078EB /* SessionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsTableViewController.h; sourceTree = "<group>"; };
@@ -84,10 +85,9 @@
 		77D475321ACC8FFF0059ECF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77D475341ACC8FFF0059ECF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77D475351ACC8FFF0059ECF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		77D475371ACC8FFF0059ECF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77D475381ACC8FFF0059ECF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77D475371ACC8FFF0059ECF7 /* ViewingDistanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewingDistanceViewController.h; sourceTree = "<group>"; };
+		77D475381ACC8FFF0059ECF7 /* ViewingDistanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewingDistanceViewController.m; sourceTree = "<group>"; };
 		77D4753B1ACC8FFF0059ECF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77D475401ACC8FFF0059ECF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77D475461ACC8FFF0059ECF7 /* NeuroplasticityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuroplasticityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D4754B1ACC8FFF0059ECF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 			children = (
 				77D475341ACC8FFF0059ECF7 /* AppDelegate.h */,
 				77D475351ACC8FFF0059ECF7 /* AppDelegate.m */,
-				77D475371ACC8FFF0059ECF7 /* ViewController.h */,
-				77D475381ACC8FFF0059ECF7 /* ViewController.m */,
+				77D475371ACC8FFF0059ECF7 /* ViewingDistanceViewController.h */,
+				77D475381ACC8FFF0059ECF7 /* ViewingDistanceViewController.m */,
 				77792ADE1AD87B0300D078EB /* SessionsController.h */,
 				77792ADF1AD87B0300D078EB /* SessionsController.m */,
 				77792AD51AD8668000D078EB /* SessionsTableViewController.h */,
@@ -197,8 +197,8 @@
 				77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */,
 				777DFCC71AD4807800ADC571 /* Exercises */,
 				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
-				77D4753D1ACC8FFF0059ECF7 /* Images.xcassets */,
 				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
+				773E972C1ADF1CE700C8C1B5 /* Images.xcassets */,
 				77D475301ACC8FFF0059ECF7 /* Supporting Files */,
 			);
 			path = Neuroplasticity;
@@ -279,6 +279,7 @@
 				TargetAttributes = {
 					77D4752C1ACC8FFF0059ECF7 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = N7G76WLU2V;
 					};
 					77D475451ACC8FFF0059ECF7 = {
 						CreatedOnToolsVersion = 6.2;
@@ -311,9 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D4753C1ACC8FFF0059ECF7 /* Main.storyboard in Resources */,
+				773E972D1ADF1CE700C8C1B5 /* Images.xcassets in Resources */,
 				77D475411ACC8FFF0059ECF7 /* LaunchScreen.xib in Resources */,
 				77D251DA1ACF3C110010B190 /* Activity.json in Resources */,
-				77D4753E1ACC8FFF0059ECF7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +335,7 @@
 				77792AE01AD87B0300D078EB /* SessionsController.m in Sources */,
 				77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */,
 				777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */,
-				77D475391ACC8FFF0059ECF7 /* ViewController.m in Sources */,
+				77D475391ACC8FFF0059ECF7 /* ViewingDistanceViewController.m in Sources */,
 				77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */,
 				77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */,
 				77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */,
@@ -463,13 +464,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Neuroplasticity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -478,13 +483,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Neuroplasticity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
