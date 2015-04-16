@@ -25,11 +25,11 @@
     UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(-self.view.frame.size.width, 0, self.view.frame.size.width *3, self.view.frame.size.height)];
     
     
-    [giantView setBackgroundColor:[UIColor yellowColor]];
-    UIColor *rectangleColor = [UIColor blueColor];
+    [giantView setBackgroundColor:[UIColor whiteColor]];
+    UIColor *rectangleColor = [UIColor redColor];
     float totalRepeats = 500.0;
     float duration = 2;
-    int numberOfRectangles = 20;
+    int numberOfRectangles = 10;
 
     
     
