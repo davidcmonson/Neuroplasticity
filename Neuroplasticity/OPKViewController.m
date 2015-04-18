@@ -22,12 +22,12 @@
     
     UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(- self.view.frame.size.width, - self.view.frame.size.height, self.view.frame.size.width * 3, self.view.frame.size.height * 3)];
 
-    double rads = DEGREES_TO_RADIANS(0);
+    double rads = DEGREES_TO_RADIANS(-45);
     giantView.transform = CGAffineTransformMakeRotation(rads);
     
     [giantView setBackgroundColor:[UIColor whiteColor]];
-    CGFloat rectangleWidth = giantView.bounds.size.width / 100;
-    UIColor *backgroundColor = [UIColor blueColor];
+    CGFloat rectangleWidth = giantView.bounds.size.width / 20;
+    UIColor *backgroundColor = [UIColor redColor];
     float totalRepeats = 500.0;
     float duration = 10;
     

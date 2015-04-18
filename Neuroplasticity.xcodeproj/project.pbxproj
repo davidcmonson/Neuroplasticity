@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		773E972D1ADF1CE700C8C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773E972C1ADF1CE700C8C1B5 /* Images.xcassets */; };
+		773E97301AE06B0500C8C1B5 /* ExercisePresetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */; };
+		773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */; };
 		77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */; };
 		77792AD71AD8668000D078EB /* SessionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD61AD8668000D078EB /* SessionsTableViewController.m */; };
 		77792ADA1AD8696A00D078EB /* ExercisePlaylistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */; };
@@ -50,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		773E972C1ADF1CE700C8C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		773E972E1AE06B0500C8C1B5 /* ExercisePresetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePresetsController.h; sourceTree = "<group>"; };
+		773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePresetsController.m; sourceTree = "<group>"; };
+		773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePlaylistController.h; sourceTree = "<group>"; };
+		773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePlaylistController.m; sourceTree = "<group>"; };
 		77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartesianCrossViewController.h; sourceTree = "<group>"; };
 		77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartesianCrossViewController.m; sourceTree = "<group>"; };
 		77792AD51AD8668000D078EB /* SessionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsTableViewController.h; sourceTree = "<group>"; };
@@ -148,14 +154,14 @@
 		777DFCC71AD4807800ADC571 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
-				777DFCC41AD4806C00ADC571 /* HemistimViewController.h */,
-				777DFCC51AD4806C00ADC571 /* HemistimViewController.m */,
-				77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */,
-				77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */,
 				77D251DB1ACF3D050010B190 /* PursuitsViewController.h */,
 				77D251DC1ACF3D050010B190 /* PursuitsViewController.m */,
 				77D251DE1AD227670010B190 /* OPKViewController.h */,
 				77D251DF1AD227670010B190 /* OPKViewController.m */,
+				777DFCC41AD4806C00ADC571 /* HemistimViewController.h */,
+				777DFCC51AD4806C00ADC571 /* HemistimViewController.m */,
+				77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */,
+				77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */,
 			);
 			name = Exercises;
 			sourceTree = "<group>";
@@ -193,8 +199,12 @@
 				77792AD61AD8668000D078EB /* SessionsTableViewController.m */,
 				77792AD81AD8696A00D078EB /* ExercisePlaylistTableViewController.h */,
 				77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */,
+				773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */,
+				773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */,
 				77792ADB1AD86F4600D078EB /* ExercisePresetsTableViewController.h */,
 				77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */,
+				773E972E1AE06B0500C8C1B5 /* ExercisePresetsController.h */,
+				773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */,
 				777DFCC71AD4807800ADC571 /* Exercises */,
 				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
 				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
@@ -333,8 +343,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77792AE01AD87B0300D078EB /* SessionsController.m in Sources */,
+				773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */,
 				77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */,
 				777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */,
+				773E97301AE06B0500C8C1B5 /* ExercisePresetsController.m in Sources */,
 				77D475391ACC8FFF0059ECF7 /* ViewingDistanceViewController.m in Sources */,
 				77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */,
 				77D251DD1ACF3D050010B190 /* PursuitsViewController.m in Sources */,

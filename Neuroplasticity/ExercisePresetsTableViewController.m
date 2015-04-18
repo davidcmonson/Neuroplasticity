@@ -7,42 +7,33 @@
 //
 
 #import "ExercisePresetsTableViewController.h"
+#import "ExercisePresetsController.h"
+
+#import <Parse/Parse.h>
 
 @interface ExercisePresetsTableViewController ()
 
-@property (nonatomic, strong) NSDictionary *activity;
+@property (nonatomic, strong) NSDictionary *activitiesDictionary;
+@property (nonatomic, strong) NSString *sectionTitle;
+
 
 @end
 
 @implementation ExercisePresetsTableViewController
 
-- (instancetype)initWithActivity:(NSDictionary *)activity
-{
-    self = [super init];
-    if (self) {
-        self.activity = activity;
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[ExercisePresetsController sharedInstance]  queryForPresetExercisesWithCompletion:^(BOOL completion) {
+        self.activitiesDictionary  = [[NSDictionary alloc]initWithDictionary:[ExercisePresetsController sharedInstance].dictionary];
+        [self.tableView reloadData];
+    }];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
-    NSBundle *bundle = [NSBundle mainBundle];
-    
-    NSError *error;
-    
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[bundle URLForResource:@"Activity" withExtension:@"json"]] options:NSJSONReadingAllowFragments error:&error];
-    
-    self.activity = array.firstObject;
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,27 +44,37 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+   
+    return self.activitiesDictionary.count;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 1;
+
+    return [self.activitiesDictionary[@"pursuits"] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.textLabel.text = self.activity[@"name"];
+    if (indexPath.section == 0) {
+        self.sectionTitle = @"pursuits";
+    } else if (indexPath.section == 1) {
+        self.sectionTitle = @"OPK";
+    }else if (indexPath.section == 2) {
+        self.sectionTitle = @"hemistim";
+    }else if (indexPath.section == 3) {
+        self.sectionTitle = @"cartesianCross";
+    }
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text =[NSString stringWithFormat:@"%@",self.activitiesDictionary[self.sectionTitle][indexPath.row][@"identifier"]];
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.

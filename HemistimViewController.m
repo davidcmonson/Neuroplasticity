@@ -26,7 +26,7 @@
     
     
     [giantView setBackgroundColor:[UIColor whiteColor]];
-    UIColor *rectangleColor = [UIColor redColor];
+    UIColor *rectangleColor = [UIColor blueColor];
     float totalRepeats = 500.0;
     float duration = 2;
     int numberOfRectangles = 10;

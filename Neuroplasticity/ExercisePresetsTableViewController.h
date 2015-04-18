@@ -10,6 +10,4 @@
 
 @interface ExercisePresetsTableViewController : UITableViewController
 
-- (instancetype)initWithActivity:(NSDictionary *)activity;
-
 @end

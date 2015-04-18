@@ -29,14 +29,14 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // ...
-    PFQuery *query = [PFQuery queryWithClassName:@"Default"];
-    [query getObjectInBackgroundWithId:@"UYs0sixfYO" block:^(PFObject *object, NSError *error) {
-        PFFile *file = object[@"exercises"];
-        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-            NSLog(@"Check this shiz out: %@", array);
-                              }];
-    }];
+//    PFQuery *query = [PFQuery queryWithClassName:@"Default"];
+//    [query getObjectInBackgroundWithId:@"UYs0sixfYO" block:^(PFObject *object, NSError *error) {
+//        PFFile *file = object[@"exercises"];
+//        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+//            NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+//            NSLog(@"Check this shiz out: %@", array);
+//                              }];
+//    }];
     
     
     

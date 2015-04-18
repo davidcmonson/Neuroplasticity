@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ExercisePresetsDataSource : NSObject
+@interface ExercisePresetsController : NSObject
+
+@property (nonatomic, strong) NSDictionary *dictionary;
+
++ (ExercisePresetsController *)sharedInstance;
+-(void)queryForPresetExercisesWithCompletion:(void (^)(BOOL completion))weAreDone;
 
 @end
