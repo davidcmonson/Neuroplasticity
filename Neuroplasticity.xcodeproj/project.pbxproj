@@ -10,11 +10,16 @@
 		773E972D1ADF1CE700C8C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773E972C1ADF1CE700C8C1B5 /* Images.xcassets */; };
 		773E97301AE06B0500C8C1B5 /* ExercisePresetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */; };
 		773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */; };
+		773E973D1AE576E700C8C1B5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E973C1AE576E700C8C1B5 /* ParseUI.framework */; };
+		773E97401AE5776500C8C1B5 /* CustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E973F1AE5776500C8C1B5 /* CustomLoginViewController.m */; };
+		773E97431AE5779100C8C1B5 /* CustomSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E97421AE5779100C8C1B5 /* CustomSignUpViewController.m */; };
+		773E97471AE579F800C8C1B5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E97461AE579F800C8C1B5 /* Social.framework */; };
+		773E97491AE579FF00C8C1B5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E97481AE579FF00C8C1B5 /* Accounts.framework */; };
 		77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */; };
-		77792AD71AD8668000D078EB /* SessionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD61AD8668000D078EB /* SessionsTableViewController.m */; };
+		77792AD71AD8668000D078EB /* PlaylistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD61AD8668000D078EB /* PlaylistsTableViewController.m */; };
 		77792ADA1AD8696A00D078EB /* ExercisePlaylistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */; };
 		77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */; };
-		77792AE01AD87B0300D078EB /* SessionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ADF1AD87B0300D078EB /* SessionsController.m */; };
+		77792AE01AD87B0300D078EB /* PlaylistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ADF1AD87B0300D078EB /* PlaylistsController.m */; };
 		77792AE31ADA1E1600D078EB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE11ADA1E1600D078EB /* Bolts.framework */; };
 		77792AE41ADA1E1600D078EB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE21ADA1E1600D078EB /* Parse.framework */; };
 		77792AE61ADA207400D078EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE51ADA207400D078EB /* AudioToolbox.framework */; };
@@ -56,16 +61,23 @@
 		773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePresetsController.m; sourceTree = "<group>"; };
 		773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePlaylistController.h; sourceTree = "<group>"; };
 		773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePlaylistController.m; sourceTree = "<group>"; };
+		773E973C1AE576E700C8C1B5 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		773E973E1AE5776500C8C1B5 /* CustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginViewController.h; sourceTree = "<group>"; };
+		773E973F1AE5776500C8C1B5 /* CustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginViewController.m; sourceTree = "<group>"; };
+		773E97411AE5779100C8C1B5 /* CustomSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSignUpViewController.h; sourceTree = "<group>"; };
+		773E97421AE5779100C8C1B5 /* CustomSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSignUpViewController.m; sourceTree = "<group>"; };
+		773E97461AE579F800C8C1B5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		773E97481AE579FF00C8C1B5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartesianCrossViewController.h; sourceTree = "<group>"; };
 		77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartesianCrossViewController.m; sourceTree = "<group>"; };
-		77792AD51AD8668000D078EB /* SessionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsTableViewController.h; sourceTree = "<group>"; };
-		77792AD61AD8668000D078EB /* SessionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionsTableViewController.m; sourceTree = "<group>"; };
+		77792AD51AD8668000D078EB /* PlaylistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistsTableViewController.h; sourceTree = "<group>"; };
+		77792AD61AD8668000D078EB /* PlaylistsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistsTableViewController.m; sourceTree = "<group>"; };
 		77792AD81AD8696A00D078EB /* ExercisePlaylistTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePlaylistTableViewController.h; sourceTree = "<group>"; };
 		77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePlaylistTableViewController.m; sourceTree = "<group>"; };
 		77792ADB1AD86F4600D078EB /* ExercisePresetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePresetsTableViewController.h; sourceTree = "<group>"; };
 		77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePresetsTableViewController.m; sourceTree = "<group>"; };
-		77792ADE1AD87B0300D078EB /* SessionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsController.h; sourceTree = "<group>"; };
-		77792ADF1AD87B0300D078EB /* SessionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionsController.m; sourceTree = "<group>"; };
+		77792ADE1AD87B0300D078EB /* PlaylistsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistsController.h; sourceTree = "<group>"; };
+		77792ADF1AD87B0300D078EB /* PlaylistsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistsController.m; sourceTree = "<group>"; };
 		77792AE11ADA1E1600D078EB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		77792AE21ADA1E1600D078EB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		77792AE51ADA207400D078EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -105,8 +117,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773E97491AE579FF00C8C1B5 /* Accounts.framework in Frameworks */,
+				773E97471AE579F800C8C1B5 /* Social.framework in Frameworks */,
 				77792AFA1ADA20E200D078EB /* libsqlite3.dylib in Frameworks */,
 				77792AF81ADA20CD00D078EB /* libz.dylib in Frameworks */,
+				773E973D1AE576E700C8C1B5 /* ParseUI.framework in Frameworks */,
 				77792AF61ADA20C000D078EB /* SystemConfiguration.framework in Frameworks */,
 				77792AF41ADA20B600D078EB /* StoreKit.framework in Frameworks */,
 				77792AF21ADA20AD00D078EB /* Security.framework in Frameworks */,
@@ -131,11 +146,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		773E97381AE1E53300C8C1B5 /* Playlists */ = {
+			isa = PBXGroup;
+			children = (
+				77792AD51AD8668000D078EB /* PlaylistsTableViewController.h */,
+				77792AD61AD8668000D078EB /* PlaylistsTableViewController.m */,
+				77792ADE1AD87B0300D078EB /* PlaylistsController.h */,
+				77792ADF1AD87B0300D078EB /* PlaylistsController.m */,
+			);
+			name = Playlists;
+			sourceTree = "<group>";
+		};
+		773E97391AE1E55A00C8C1B5 /* ExercisePlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				77792AD81AD8696A00D078EB /* ExercisePlaylistTableViewController.h */,
+				77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */,
+				773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */,
+				773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */,
+			);
+			name = ExercisePlaylist;
+			sourceTree = "<group>";
+		};
+		773E973A1AE1E56700C8C1B5 /* ExercisePresets */ = {
+			isa = PBXGroup;
+			children = (
+				77792ADB1AD86F4600D078EB /* ExercisePresetsTableViewController.h */,
+				77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */,
+				773E972E1AE06B0500C8C1B5 /* ExercisePresetsController.h */,
+				773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */,
+			);
+			name = ExercisePresets;
+			sourceTree = "<group>";
+		};
+		773E973B1AE1E57700C8C1B5 /* ViewingDistance */ = {
+			isa = PBXGroup;
+			children = (
+				77D475371ACC8FFF0059ECF7 /* ViewingDistanceViewController.h */,
+				77D475381ACC8FFF0059ECF7 /* ViewingDistanceViewController.m */,
+			);
+			name = ViewingDistance;
+			sourceTree = "<group>";
+		};
+		773E97451AE577C600C8C1B5 /* CustomSignUpLogIn */ = {
+			isa = PBXGroup;
+			children = (
+				773E97411AE5779100C8C1B5 /* CustomSignUpViewController.h */,
+				773E97421AE5779100C8C1B5 /* CustomSignUpViewController.m */,
+				773E973E1AE5776500C8C1B5 /* CustomLoginViewController.h */,
+				773E973F1AE5776500C8C1B5 /* CustomLoginViewController.m */,
+			);
+			name = CustomSignUpLogIn;
+			sourceTree = "<group>";
+		};
 		77792AFB1ADA227200D078EB /* FrameworksAndLibraries */ = {
 			isa = PBXGroup;
 			children = (
 				77792AF91ADA20E200D078EB /* libsqlite3.dylib */,
 				77792AF71ADA20CD00D078EB /* libz.dylib */,
+				773E973C1AE576E700C8C1B5 /* ParseUI.framework */,
 				77792AF51ADA20C000D078EB /* SystemConfiguration.framework */,
 				77792AF31ADA20B600D078EB /* StoreKit.framework */,
 				77792AF11ADA20AD00D078EB /* Security.framework */,
@@ -169,6 +238,8 @@
 		77D475241ACC8FFF0059ECF7 = {
 			isa = PBXGroup;
 			children = (
+				773E97481AE579FF00C8C1B5 /* Accounts.framework */,
+				773E97461AE579F800C8C1B5 /* Social.framework */,
 				77D4752F1ACC8FFF0059ECF7 /* Neuroplasticity */,
 				77D475491ACC8FFF0059ECF7 /* NeuroplasticityTests */,
 				77D4752E1ACC8FFF0059ECF7 /* Products */,
@@ -191,20 +262,11 @@
 			children = (
 				77D475341ACC8FFF0059ECF7 /* AppDelegate.h */,
 				77D475351ACC8FFF0059ECF7 /* AppDelegate.m */,
-				77D475371ACC8FFF0059ECF7 /* ViewingDistanceViewController.h */,
-				77D475381ACC8FFF0059ECF7 /* ViewingDistanceViewController.m */,
-				77792ADE1AD87B0300D078EB /* SessionsController.h */,
-				77792ADF1AD87B0300D078EB /* SessionsController.m */,
-				77792AD51AD8668000D078EB /* SessionsTableViewController.h */,
-				77792AD61AD8668000D078EB /* SessionsTableViewController.m */,
-				77792AD81AD8696A00D078EB /* ExercisePlaylistTableViewController.h */,
-				77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */,
-				773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */,
-				773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */,
-				77792ADB1AD86F4600D078EB /* ExercisePresetsTableViewController.h */,
-				77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */,
-				773E972E1AE06B0500C8C1B5 /* ExercisePresetsController.h */,
-				773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */,
+				773E97451AE577C600C8C1B5 /* CustomSignUpLogIn */,
+				773E973B1AE1E57700C8C1B5 /* ViewingDistance */,
+				773E97381AE1E53300C8C1B5 /* Playlists */,
+				773E97391AE1E55A00C8C1B5 /* ExercisePlaylist */,
+				773E973A1AE1E56700C8C1B5 /* ExercisePresets */,
 				777DFCC71AD4807800ADC571 /* Exercises */,
 				77D4753A1ACC8FFF0059ECF7 /* Main.storyboard */,
 				77D4753F1ACC8FFF0059ECF7 /* LaunchScreen.xib */,
@@ -342,9 +404,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77792AE01AD87B0300D078EB /* SessionsController.m in Sources */,
+				77792AE01AD87B0300D078EB /* PlaylistsController.m in Sources */,
 				773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */,
 				77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */,
+				773E97401AE5776500C8C1B5 /* CustomLoginViewController.m in Sources */,
 				777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */,
 				773E97301AE06B0500C8C1B5 /* ExercisePresetsController.m in Sources */,
 				77D475391ACC8FFF0059ECF7 /* ViewingDistanceViewController.m in Sources */,
@@ -353,7 +416,8 @@
 				77D475361ACC8FFF0059ECF7 /* AppDelegate.m in Sources */,
 				77792ADA1AD8696A00D078EB /* ExercisePlaylistTableViewController.m in Sources */,
 				77D251E01AD227670010B190 /* OPKViewController.m in Sources */,
-				77792AD71AD8668000D078EB /* SessionsTableViewController.m in Sources */,
+				773E97431AE5779100C8C1B5 /* CustomSignUpViewController.m in Sources */,
+				77792AD71AD8668000D078EB /* PlaylistsTableViewController.m in Sources */,
 				77D475331ACC8FFF0059ECF7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

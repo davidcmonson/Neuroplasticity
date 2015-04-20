@@ -40,7 +40,7 @@
         <!--Title-->
         <scene sceneID="wjD-Ha-OZz">
             <objects>
-                <tableViewController id="F9y-7M-OJD" customClass="SessionsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="F9y-7M-OJD" customClass="PlaylistsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ztb-aX-Kmb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Cgk-Cp-Kfo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mRz-ag-XL4">
                             <connections>
-                                <action selector="addSessionButtonTapped:" destination="F9y-7M-OJD" id="3ho-Vh-y87"/>
+                                <action selector="addPlaylistButtonTapped:" destination="F9y-7M-OJD" id="uV3-tP-ADb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
