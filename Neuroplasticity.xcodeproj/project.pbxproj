@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		773E972D1ADF1CE700C8C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773E972C1ADF1CE700C8C1B5 /* Images.xcassets */; };
 		773E97301AE06B0500C8C1B5 /* ExercisePresetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */; };
-		773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */; };
-		773E973D1AE576E700C8C1B5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E973C1AE576E700C8C1B5 /* ParseUI.framework */; };
 		773E97401AE5776500C8C1B5 /* CustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E973F1AE5776500C8C1B5 /* CustomLoginViewController.m */; };
 		773E97431AE5779100C8C1B5 /* CustomSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E97421AE5779100C8C1B5 /* CustomSignUpViewController.m */; };
 		773E97471AE579F800C8C1B5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E97461AE579F800C8C1B5 /* Social.framework */; };
 		773E97491AE579FF00C8C1B5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E97481AE579FF00C8C1B5 /* Accounts.framework */; };
+		773E974B1AE6F57100C8C1B5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E974A1AE6F57100C8C1B5 /* Parse.framework */; };
+		773E974D1AE6F57A00C8C1B5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E974C1AE6F57A00C8C1B5 /* Bolts.framework */; };
+		773E974F1AE6F58900C8C1B5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E974E1AE6F58900C8C1B5 /* ParseUI.framework */; };
 		77792ACC1AD5E73300D078EB /* CartesianCrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */; };
 		77792AD71AD8668000D078EB /* PlaylistsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD61AD8668000D078EB /* PlaylistsTableViewController.m */; };
 		77792ADA1AD8696A00D078EB /* ExercisePlaylistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */; };
 		77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */; };
 		77792AE01AD87B0300D078EB /* PlaylistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77792ADF1AD87B0300D078EB /* PlaylistsController.m */; };
-		77792AE31ADA1E1600D078EB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE11ADA1E1600D078EB /* Bolts.framework */; };
-		77792AE41ADA1E1600D078EB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE21ADA1E1600D078EB /* Parse.framework */; };
 		77792AE61ADA207400D078EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE51ADA207400D078EB /* AudioToolbox.framework */; };
 		77792AE81ADA207D00D078EB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE71ADA207D00D078EB /* CFNetwork.framework */; };
 		77792AEA1ADA208700D078EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77792AE91ADA208700D078EB /* CoreGraphics.framework */; };
@@ -59,15 +58,15 @@
 		773E972C1ADF1CE700C8C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		773E972E1AE06B0500C8C1B5 /* ExercisePresetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePresetsController.h; sourceTree = "<group>"; };
 		773E972F1AE06B0500C8C1B5 /* ExercisePresetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePresetsController.m; sourceTree = "<group>"; };
-		773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercisePlaylistController.h; sourceTree = "<group>"; };
-		773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePlaylistController.m; sourceTree = "<group>"; };
-		773E973C1AE576E700C8C1B5 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		773E973E1AE5776500C8C1B5 /* CustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginViewController.h; sourceTree = "<group>"; };
 		773E973F1AE5776500C8C1B5 /* CustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginViewController.m; sourceTree = "<group>"; };
 		773E97411AE5779100C8C1B5 /* CustomSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSignUpViewController.h; sourceTree = "<group>"; };
 		773E97421AE5779100C8C1B5 /* CustomSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSignUpViewController.m; sourceTree = "<group>"; };
 		773E97461AE579F800C8C1B5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		773E97481AE579FF00C8C1B5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		773E974A1AE6F57100C8C1B5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		773E974C1AE6F57A00C8C1B5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		773E974E1AE6F58900C8C1B5 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		77792ACA1AD5E73300D078EB /* CartesianCrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartesianCrossViewController.h; sourceTree = "<group>"; };
 		77792ACB1AD5E73300D078EB /* CartesianCrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartesianCrossViewController.m; sourceTree = "<group>"; };
 		77792AD51AD8668000D078EB /* PlaylistsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistsTableViewController.h; sourceTree = "<group>"; };
@@ -78,8 +77,6 @@
 		77792ADC1AD86F4600D078EB /* ExercisePresetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercisePresetsTableViewController.m; sourceTree = "<group>"; };
 		77792ADE1AD87B0300D078EB /* PlaylistsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistsController.h; sourceTree = "<group>"; };
 		77792ADF1AD87B0300D078EB /* PlaylistsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistsController.m; sourceTree = "<group>"; };
-		77792AE11ADA1E1600D078EB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		77792AE21ADA1E1600D078EB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		77792AE51ADA207400D078EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		77792AE71ADA207D00D078EB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		77792AE91ADA208700D078EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,8 +118,9 @@
 				773E97471AE579F800C8C1B5 /* Social.framework in Frameworks */,
 				77792AFA1ADA20E200D078EB /* libsqlite3.dylib in Frameworks */,
 				77792AF81ADA20CD00D078EB /* libz.dylib in Frameworks */,
-				773E973D1AE576E700C8C1B5 /* ParseUI.framework in Frameworks */,
+				773E974B1AE6F57100C8C1B5 /* Parse.framework in Frameworks */,
 				77792AF61ADA20C000D078EB /* SystemConfiguration.framework in Frameworks */,
+				773E974F1AE6F58900C8C1B5 /* ParseUI.framework in Frameworks */,
 				77792AF41ADA20B600D078EB /* StoreKit.framework in Frameworks */,
 				77792AF21ADA20AD00D078EB /* Security.framework in Frameworks */,
 				77792AF01ADA20A300D078EB /* QuartzCore.framework in Frameworks */,
@@ -131,8 +129,7 @@
 				77792AEA1ADA208700D078EB /* CoreGraphics.framework in Frameworks */,
 				77792AE81ADA207D00D078EB /* CFNetwork.framework in Frameworks */,
 				77792AE61ADA207400D078EB /* AudioToolbox.framework in Frameworks */,
-				77792AE41ADA1E1600D078EB /* Parse.framework in Frameworks */,
-				77792AE31ADA1E1600D078EB /* Bolts.framework in Frameworks */,
+				773E974D1AE6F57A00C8C1B5 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +159,6 @@
 			children = (
 				77792AD81AD8696A00D078EB /* ExercisePlaylistTableViewController.h */,
 				77792AD91AD8696A00D078EB /* ExercisePlaylistTableViewController.m */,
-				773E97341AE1E10000C8C1B5 /* ExercisePlaylistController.h */,
-				773E97351AE1E10000C8C1B5 /* ExercisePlaylistController.m */,
 			);
 			name = ExercisePlaylist;
 			sourceTree = "<group>";
@@ -202,9 +197,11 @@
 		77792AFB1ADA227200D078EB /* FrameworksAndLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				773E974E1AE6F58900C8C1B5 /* ParseUI.framework */,
+				773E974C1AE6F57A00C8C1B5 /* Bolts.framework */,
+				773E974A1AE6F57100C8C1B5 /* Parse.framework */,
 				77792AF91ADA20E200D078EB /* libsqlite3.dylib */,
 				77792AF71ADA20CD00D078EB /* libz.dylib */,
-				773E973C1AE576E700C8C1B5 /* ParseUI.framework */,
 				77792AF51ADA20C000D078EB /* SystemConfiguration.framework */,
 				77792AF31ADA20B600D078EB /* StoreKit.framework */,
 				77792AF11ADA20AD00D078EB /* Security.framework */,
@@ -214,8 +211,6 @@
 				77792AE91ADA208700D078EB /* CoreGraphics.framework */,
 				77792AE71ADA207D00D078EB /* CFNetwork.framework */,
 				77792AE51ADA207400D078EB /* AudioToolbox.framework */,
-				77792AE11ADA1E1600D078EB /* Bolts.framework */,
-				77792AE21ADA1E1600D078EB /* Parse.framework */,
 			);
 			name = FrameworksAndLibraries;
 			sourceTree = "<group>";
@@ -405,7 +400,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77792AE01AD87B0300D078EB /* PlaylistsController.m in Sources */,
-				773E97361AE1E10000C8C1B5 /* ExercisePlaylistController.m in Sources */,
 				77792ADD1AD86F4600D078EB /* ExercisePresetsTableViewController.m in Sources */,
 				773E97401AE5776500C8C1B5 /* CustomLoginViewController.m in Sources */,
 				777DFCC61AD4806C00ADC571 /* HemistimViewController.m in Sources */,

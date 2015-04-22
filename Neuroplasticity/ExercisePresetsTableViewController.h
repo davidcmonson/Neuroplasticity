@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ExercisePresetsTableViewController : UITableViewController
+
+@property (nonatomic, strong) PFObject *selectedPlaylistObject;
 
 @end

@@ -35,7 +35,7 @@
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
             NSLog(@"ExercisePresetsController is getting data?: %@", dictionary[@"pursuits"] [0]);
-            self.dictionary = dictionary;
+            self.presetsDictionary = dictionary;
             weAreDone(YES);
             
         }];

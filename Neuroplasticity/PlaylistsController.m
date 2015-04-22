@@ -24,12 +24,6 @@
     return sharedInstance;
 }
 
-
-
-//do all the parse stuff
-
-// make a mutable array of session in order recent to oldest
-
 - (void)createNewPlaylist {
     PFObject *playlist = [PFObject objectWithClassName:@"Playlist"];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -47,21 +41,15 @@
             NSLog(@"error saving playlist to Parse: %@", error.description);
         }
     }];
-    
-    [self queryForPlaylistsWithCompletion:^(BOOL completion) {
-        //reload tableview?
-    }];
 }
 
 -(void)queryForPlaylistsWithCompletion:(void (^)(BOOL completion))weAreDone
 {
     PFQuery *queryForPlaylists = [PFQuery queryWithClassName:@"Playlist"];
     [queryForPlaylists whereKey:@"owner" equalTo:[PFUser currentUser]];
+//    [queryForPlaylists selectKeys:@[@"playlistArray"]];  does this limit me?
     [queryForPlaylists findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.playlistExercisesArray = [NSMutableArray arrayWithArray:objects];
-//        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-//            NSLog(@"ExercisePresetsController is getting data?: %@", dictionary[@"pursuits"] [0]);
-//            self.dictionary = dictionary;
+        self.playlistArray = [NSMutableArray arrayWithArray:objects];
             weAreDone(YES);
             
     }];
@@ -71,7 +59,36 @@
     [playlist deleteInBackground];
     [self queryForPlaylistsWithCompletion:^(BOOL completion) {
         //reload tableview?
+        NSLog(@"Object deleted from parse");
     }];
 }
+
+- (void)addExerciseToPlaylist:(NSDictionary *)exercise {
+    [self.exercisesArray addObject:exercise];
+#warning add object to array not quite working...
+    PFQuery *query = [PFQuery queryWithClassName:@"Playlist"];
+    [query getObjectInBackgroundWithId:self.object.objectId block:^(PFObject *playlist, NSError *error) {
+        playlist[@"playlistArray"] = self.exercisesArray;
+        [playlist saveInBackground];
+        
+    }];
+        
+}
+
+- (void)removeExerciseFromPlaylist:(NSDictionary *)exercise {
+    
+}
+
+-(void)queryForExercisesWithID:(PFObject *)object WithCompletion:(void (^)(BOOL completion))weAreDone
+{
+    PFQuery *queryForExercises = [PFQuery queryWithClassName:@"Playlist"];
+    [queryForExercises whereKey:@"objectId" equalTo:object];
+    self.object = object;
+    [queryForExercises findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.exercisesArray = [NSMutableArray arrayWithArray:objects];
+        weAreDone(YES);
+        
+    }];
+};
 
 @end

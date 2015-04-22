@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ExercisePlaylistTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *titleLabel;
+@property (nonatomic, strong) NSMutableArray *playlistArray;
+@property (nonatomic, strong) PFObject *selectedPlaylistObject;
 
 @end

@@ -7,8 +7,13 @@
 //
 
 #import "ExercisePlaylistTableViewController.h"
+#import "PlaylistsTableViewController.h"
+#import "ExercisePresetsTableViewController.h"
+#import "PlaylistsController.h"
+#import <Parse/Parse.h>
 
 @interface ExercisePlaylistTableViewController ()
+
 
 @end
 
@@ -21,11 +26,19 @@
     
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
+    [PlaylistsController sharedInstance].object = self.selectedPlaylistObject;
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [[PlaylistsController sharedInstance]queryForExercisesWithID:self.selectedPlaylistObject WithCompletion:^(BOOL completion) {
+        [self.tableView reloadData];
+    }];
 }
 
 //- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,24 +62,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 10;
+    
+    return [self.selectedPlaylistObject[@"playlistArray"] count];;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSString *exerciseName = self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"identifier"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",exerciseName];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //play animation and continue to play each animation after each one finishes.
 }
 
 
@@ -104,14 +120,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    ExercisePresetsTableViewController *tableViewController = [segue destinationViewController];
+     tableViewController.selectedPlaylistObject = self.selectedPlaylistObject;
+    
 }
-*/
+
 
 @end

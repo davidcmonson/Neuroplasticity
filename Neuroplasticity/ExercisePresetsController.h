@@ -10,7 +10,7 @@
 
 @interface ExercisePresetsController : NSObject
 
-@property (nonatomic, strong) NSDictionary *dictionary;
+@property (nonatomic, strong) NSDictionary *presetsDictionary;
 
 + (ExercisePresetsController *)sharedInstance;
 -(void)queryForPresetExercisesWithCompletion:(void (^)(BOOL completion))weAreDone;

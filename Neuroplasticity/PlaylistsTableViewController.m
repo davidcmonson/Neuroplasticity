@@ -17,7 +17,7 @@
 
 @interface PlaylistsTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
-@property (nonatomic, strong) NSArray *playlistsArray;
+@property (nonatomic, strong) NSMutableArray *playlistsArray;
 
 @end
 
@@ -42,11 +42,11 @@
         
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        
     } else {
     [[PlaylistsController sharedInstance] queryForPlaylistsWithCompletion:^(BOOL completion) {
-        self.playlistsArray = [[NSArray alloc] initWithArray:[PlaylistsController sharedInstance].playlistExercisesArray];
+        self.playlistsArray = [[NSMutableArray alloc] initWithArray:[PlaylistsController sharedInstance].playlistArray];
         [self.tableView reloadData];
-        
     }];
     }
     
@@ -57,27 +57,32 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
 }
 
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Return YES if you want the specified item to be editable.
-//    return YES;
-//}
-//
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        //add code here for when you hit delete
-//        [_chats removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//    }
-//}
+-(void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PFObject *deleteObject = [self.playlistsArray objectAtIndex:indexPath.row];
+        [[PlaylistsController sharedInstance] deletePlaylist:deleteObject];
+        [self.playlistsArray removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
 - (IBAction)addPlaylistButtonTapped:(id)sender {
     [[PlaylistsController sharedInstance] createNewPlaylist];
-    [self.tableView reloadData];
+    [[PlaylistsController sharedInstance] queryForPlaylistsWithCompletion:^(BOOL completion) {
+        self.playlistsArray = [[NSMutableArray alloc] initWithArray:[PlaylistsController sharedInstance].playlistArray];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,16 +116,12 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"showExercises" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    [PlaylistsController sharedInstance].object = self.playlistsArray[indexPath.row];
+    [PlaylistsController sharedInstance].exercisesArray = [PlaylistsController sharedInstance].object[@"playlistArray"];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (IBAction)addSessionButtonTapped:(id)sender {
-    // ADD object to array to add addtional cell to screen
     
     
-    [self.tableView reloadData];
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -173,7 +174,12 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [[PlaylistsController sharedInstance] queryForPlaylistsWithCompletion:^(BOOL completion) {
+        self.playlistsArray = [[NSMutableArray alloc] initWithArray:[PlaylistsController sharedInstance].playlistArray];
+        [self.tableView reloadData];
+    }];
     [self dismissViewControllerAnimated:YES completion:NULL];
+
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -236,7 +242,10 @@
     
     if ([segue.identifier isEqualToString:@"showExercises"]) {
         ExercisePlaylistTableViewController *viewController = [segue destinationViewController];
+        
         viewController.titleLabel = [[sender textLabel] text];
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        viewController.selectedPlaylistObject = self.playlistsArray[indexPath.row];
     }
 
 }

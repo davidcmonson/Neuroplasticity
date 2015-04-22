@@ -8,13 +8,14 @@
 
 #import "ExercisePresetsTableViewController.h"
 #import "ExercisePresetsController.h"
-
+#import "PlaylistsController.h"
 #import <Parse/Parse.h>
 
 @interface ExercisePresetsTableViewController ()
 
 @property (nonatomic, strong) NSDictionary *activitiesDictionary;
 @property (nonatomic, strong) NSString *sectionTitle;
+@property (nonatomic, strong) NSString *indexSection;
 
 
 @end
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     
     [[ExercisePresetsController sharedInstance]  queryForPresetExercisesWithCompletion:^(BOOL completion) {
-        self.activitiesDictionary  = [[NSDictionary alloc]initWithDictionary:[ExercisePresetsController sharedInstance].dictionary];
+        self.activitiesDictionary  = [[NSDictionary alloc]initWithDictionary:[ExercisePresetsController sharedInstance].presetsDictionary];
         [self.tableView reloadData];
     }];
     
@@ -74,6 +75,23 @@
     cell.textLabel.text =[NSString stringWithFormat:@"%@",self.activitiesDictionary[self.sectionTitle][indexPath.row][@"identifier"]];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        self.indexSection = @"pursuits";
+    } else if (indexPath.section == 1) {
+        self.indexSection = @"OPK";
+    }else if (indexPath.section == 2) {
+        self.indexSection = @"hemistim";
+    }else if (indexPath.section == 3) {
+        self.indexSection = @"cartesianCross";
+    }
+    
+    [[PlaylistsController sharedInstance] addExerciseToPlaylist:self.activitiesDictionary[self.indexSection][indexPath.row]];
+    NSLog(@"Exercise Added %@", self.activitiesDictionary[self.indexSection][indexPath.row]);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

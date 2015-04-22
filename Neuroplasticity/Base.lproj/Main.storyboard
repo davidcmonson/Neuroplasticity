@@ -28,6 +28,7 @@
                     <navigationItem key="navigationItem" title="Title" id="cQH-8v-VA1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DEf-zp-RFK">
                             <connections>
+                                <action selector="addExerciseToPlaylistButtonSelected:" destination="hIj-Nc-zdG" id="RK6-54-P4h"/>
                                 <segue destination="n7U-s6-O7x" kind="show" id="2xc-ba-3PS"/>
                             </connections>
                         </barButtonItem>
