@@ -58,7 +58,7 @@ static NSString * const endPositionKey = @"endPosition";
 
 @interface PursuitsViewController ()
 
-@property (nonatomic, strong) NSDictionary *activity;
+
 
 @end
 
@@ -77,13 +77,8 @@ static NSString * const endPositionKey = @"endPosition";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    
-    NSError *error;
-    
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:[bundle URLForResource:@"Activity" withExtension:@"json"]] options:NSJSONReadingAllowFragments error:&error];
-    
-    self.activity = array.firstObject;
+    self.view.backgroundColor = [UIColor whiteColor];
+
     
     [self performActivityWithDictionary:self.activity];
 

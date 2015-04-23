@@ -10,6 +10,10 @@
 #import "PlaylistsTableViewController.h"
 #import "ExercisePresetsTableViewController.h"
 #import "PlaylistsController.h"
+#import "PursuitsViewController.h"
+#import "OPKViewController.h"
+#import "HemistimViewController.h"
+#import "CartesianCrossViewController.h"
 #import <Parse/Parse.h>
 
 @interface ExercisePlaylistTableViewController ()
@@ -83,6 +87,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //play animation and continue to play each animation after each one finishes.
+    if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"]  isEqual: @"pursuits"]) {
+        PursuitsViewController *pursuitsViewController = [[PursuitsViewController alloc] initWithActivity:self.selectedPlaylistObject[@"playlistArray"][indexPath.row]];
+        pursuitsViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
+        [self.navigationController pushViewController:pursuitsViewController animated:YES];
+
+    }
 }
 
 

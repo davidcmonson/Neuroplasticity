@@ -64,6 +64,7 @@
 }
 
 - (void)addExerciseToPlaylist:(NSDictionary *)exercise {
+    self.exercisesArray = self.object[@"playlistArray"];
     [self.exercisesArray addObject:exercise];
 #warning add object to array not quite working...
     PFQuery *query = [PFQuery queryWithClassName:@"Playlist"];
