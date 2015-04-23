@@ -10,4 +10,6 @@
 
 @interface OPKViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *activity;
+
 @end

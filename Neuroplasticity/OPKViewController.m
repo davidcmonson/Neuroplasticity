@@ -10,6 +10,47 @@
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 
+typedef NS_ENUM(NSUInteger, StripeSize) {
+    StripeSizeSmallest,
+    StripeSizeSmall,
+    StripeSizeMedium,
+    StripeSizeLarge,
+    StripeSizeLargest,
+};
+
+typedef NS_ENUM(NSUInteger, StripeColor) {
+    StripeColorRed,
+    StripeColorBlue,
+    StripeColorGreen,
+    StripeColorOrange,
+    StripeColorPurple,
+};
+
+typedef NS_ENUM(NSUInteger, MovementDirection) {
+    MovementDirectionRight,
+    MovementDirectionLeft,
+    MovementDirectionDown,
+    MovementDirectionUp,
+    MovementDirectionUpRight,
+    MovementDirectionUpLeft,
+    MovementDirectionDownRight,
+    MovementDirectionDownLeft,
+};
+
+static NSString * const nameKey = @"name";
+static NSString * const identifierKey = @"identifier";
+static NSString * const movementDirectionKey = @"movementDirection";
+static NSString * const targetTypeKey = @"targetType";
+static NSString * const dotColorKey = @"dotColor";
+static NSString * const dotSizeKey = @"dotSize";
+static NSString * const speedKey = @"speed";
+static NSString * const sinusoidalKey = @"sinusoidal";
+static NSString * const repetitionsKey = @"repetitions";
+static NSString * const initialPauseKey = @"initialPause";
+static NSString * const finalPauseKey = @"finalPause";
+static NSString * const startPositionKey = @"startPosition";
+static NSString * const endPositionKey = @"endPosition";
+
 @interface OPKViewController ()
 
 @end
@@ -20,22 +61,106 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(- self.view.frame.size.width, - self.view.frame.size.height, self.view.frame.size.width * 3, self.view.frame.size.height * 3)];
+    [self performActivityWithDictionary:self.activity];
 
-    double rads = DEGREES_TO_RADIANS(-45);
+}
+
+- (void) performActivityWithDictionary:(NSDictionary *)dictionary {
+    
+    UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(- self.view.frame.size.width, - self.view.frame.size.height, self.view.frame.size.width * 3, self.view.frame.size.height * 3)];
+    [giantView setBackgroundColor:[UIColor whiteColor]];
+    
+    CGFloat rectangleWidth;
+    
+    StripeSize chosenStripeSize = [dictionary[dotSizeKey] integerValue];
+    
+    switch (chosenStripeSize) {
+        case StripeSizeSmallest:
+            rectangleWidth = giantView.bounds.size.width / 50;
+            break;
+        case StripeSizeSmall:
+            rectangleWidth = giantView.bounds.size.width / 40;
+            break;
+        case StripeSizeMedium:
+            rectangleWidth = giantView.bounds.size.width / 30;
+            break;
+        case StripeSizeLarge:
+            rectangleWidth = giantView.bounds.size.width / 20;
+            break;
+        case StripeSizeLargest:
+            rectangleWidth = giantView.bounds.size.width / 10;
+            break;
+    }
+    
+    //insert width code here
+    
+    UIColor *backgroundColor;
+    
+    StripeColor chosenStripeColor = [dictionary[dotColorKey] integerValue];
+    
+    switch (chosenStripeColor) {
+        case StripeColorBlue:
+            backgroundColor = [UIColor blueColor];
+            break;
+        case StripeColorGreen:
+            backgroundColor = [UIColor greenColor];
+            break;
+        case StripeColorOrange:
+            backgroundColor = [UIColor orangeColor];
+            break;
+        case StripeColorPurple:
+            backgroundColor = [UIColor purpleColor];
+            break;
+        case StripeColorRed:
+            backgroundColor = [UIColor redColor];
+            break;
+    }
+    
+    //insert color code here
+    
+    double rads;
+    
+    MovementDirection chosenMoveDirection = [dictionary[movementDirectionKey] integerValue];
+    
+    switch (chosenMoveDirection) {
+        case MovementDirectionDown:
+            rads = DEGREES_TO_RADIANS(90);
+            break;
+        case MovementDirectionDownLeft:
+            rads = DEGREES_TO_RADIANS(135);
+            break;
+        case MovementDirectionDownRight:
+            rads = DEGREES_TO_RADIANS(45);
+            break;
+        case MovementDirectionLeft:
+            rads = DEGREES_TO_RADIANS(180);
+            break;
+        case MovementDirectionRight:
+            rads = DEGREES_TO_RADIANS(0);
+            break;
+        case MovementDirectionUp:
+            rads = DEGREES_TO_RADIANS(-90);
+            break;
+        case MovementDirectionUpLeft:
+            rads = DEGREES_TO_RADIANS(-135);
+            break;
+        case MovementDirectionUpRight:
+            rads = DEGREES_TO_RADIANS(-45);
+            break;
+    }
     giantView.transform = CGAffineTransformMakeRotation(rads);
     
-    [giantView setBackgroundColor:[UIColor whiteColor]];
-    CGFloat rectangleWidth = giantView.bounds.size.width / 20;
-    UIColor *backgroundColor = [UIColor redColor];
-    float totalRepeats = 500.0;
-    float duration = 10;
+    [self.view addSubview:giantView];
+    
+    int duration = 5;
+    int totalRepeats = 10;
+
     
     for (int rectangleStartingPoint = 0; rectangleStartingPoint < giantView.bounds.size.width; (rectangleStartingPoint += rectangleWidth * 2)) {
         UIView *rectangleView = [[UIView alloc] initWithFrame:CGRectMake(giantView.bounds.origin.x, giantView.bounds.origin.y, rectangleWidth, giantView.bounds.size.height)];
         rectangleView.backgroundColor = backgroundColor;
         
-        [self.view addSubview:giantView];
+//        [self.view addSubview:giantView];
         [giantView addSubview:rectangleView];
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -46,7 +171,6 @@
         animation.repeatCount = totalRepeats;
         [rectangleView.layer addAnimation:animation forKey:@"position"];
     }
-
 }
 
 - (void)didReceiveMemoryWarning {

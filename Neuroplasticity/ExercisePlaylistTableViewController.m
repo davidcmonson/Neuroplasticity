@@ -87,11 +87,16 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //play animation and continue to play each animation after each one finishes.
+    
     if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"]  isEqual: @"pursuits"]) {
-        PursuitsViewController *pursuitsViewController = [[PursuitsViewController alloc] initWithActivity:self.selectedPlaylistObject[@"playlistArray"][indexPath.row]];
+        PursuitsViewController *pursuitsViewController = [PursuitsViewController new];
         pursuitsViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
         [self.navigationController pushViewController:pursuitsViewController animated:YES];
-
+    }
+    
+    else if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"] isEqual: @"OPK"]) {
+        OPKViewController *opkViewController = [OPKViewController new];
+        opkViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];[self.navigationController pushViewController:opkViewController animated:NO];
     }
 }
 
