@@ -64,14 +64,6 @@ static NSString * const endPositionKey = @"endPosition";
 
 @implementation PursuitsViewController
 
-- (instancetype)initWithActivity:(NSDictionary *)activity
-{
-    self = [super init];
-    if (self) {
-        self.activity = activity;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

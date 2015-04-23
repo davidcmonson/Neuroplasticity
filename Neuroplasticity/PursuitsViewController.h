@@ -10,8 +10,6 @@
 
 @interface PursuitsViewController : UIViewController
 
-- (instancetype)initWithActivity:(NSDictionary *)activity;
-
 @property (nonatomic, strong) NSDictionary *activity;
 
 @end
