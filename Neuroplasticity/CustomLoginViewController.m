@@ -19,7 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.logInView setTintColor:[UIColor blackColor]];
-//    [self.logInView setLogo: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginIcon"]]];
+    [self.logInView setLogo: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginIcon"]]];
+//    [self.logInView.logo setFrame:CGRectMake(66.5f, 70.0f, 187.0f, 58.5f)];
     [self.logInView setBackgroundColor:[UIColor colorWithRed:25.0/255.0 green:157.0/255.0 blue:243.0/255.0 alpha:1.0]];
     
     self.logInView.signUpButton.backgroundColor = [UIColor whiteColor];

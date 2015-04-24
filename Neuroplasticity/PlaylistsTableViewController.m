@@ -11,6 +11,7 @@
 #import "PlaylistsController.h"
 #import "CustomLoginViewController.h"
 #import "CustomSignUpViewController.h"
+#import "ViewingDistanceViewController.h"
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 
@@ -192,6 +193,8 @@
         [self.tableView reloadData];
     }];
     [self dismissViewControllerAnimated:YES completion:NULL];
+    ViewingDistanceViewController *viewingDistanceViewController = [ViewingDistanceViewController new];
+    [self.navigationController pushViewController:viewingDistanceViewController animated:YES];
 
 }
 

@@ -63,6 +63,7 @@
     
     if (indexPath.section == 0) {
         self.sectionTitle = @"pursuits";
+        [tableView cellForRowAtIndexPath:indexPath].backgroundColor = [UIColor orangeColor];
     } else if (indexPath.section == 1) {
         self.sectionTitle = @"OPK";
     }else if (indexPath.section == 2) {
@@ -103,6 +104,27 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.view.frame.size.height / 10;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"Pursuits", @"Pursuits");
+            break;
+        case 1:
+            sectionName = NSLocalizedString(@"OPK", @"OPK");
+            break;
+        case 2:
+            sectionName = NSLocalizedString(@"Hemistim", @"Hemistim");
+            break;
+        case 3:
+            sectionName = NSLocalizedString(@"Cartesian Cross", @"Cartesian Cross");
+            break;
+    }
+    return sectionName;
 }
 
 /*
