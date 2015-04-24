@@ -13,8 +13,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="92l-TP-PwC">
                     <rect key="frame" x="102" y="90" width="276" height="300"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="dg8-0e-yzZ"/>
-                        <constraint firstAttribute="width" constant="276" id="gje-uZ-PyV"/>
+                        <constraint firstAttribute="height" constant="300" id="dg8-0e-yzZ">
+                            <variation key="heightClass=compact" constant="100"/>
+                            <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="276" id="gje-uZ-PyV">
+                            <variation key="heightClass=compact" constant="100"/>
+                            <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                        </constraint>
                     </constraints>
                 </imageView>
             </subviews>

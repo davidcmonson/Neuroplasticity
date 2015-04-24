@@ -9,6 +9,36 @@
 #import "HemistimViewController.h"
 @import QuartzCore;
 
+typedef NS_ENUM(NSUInteger, BoxSize) {
+    BoxSizeSmallest,
+    BoxSizeSmall,
+    BoxSizeMedium,
+    BoxSizeLarge,
+    BoxSizeLargest,
+};
+
+typedef NS_ENUM(NSUInteger, BoxColor) {
+    BoxColorRed,
+    BoxColorBlue,
+    BoxColorGreen,
+    BoxColorOrange,
+    BoxColorPurple,
+};
+
+static NSString * const nameKey = @"name";
+static NSString * const identifierKey = @"identifier";
+static NSString * const movementDirectionKey = @"movementDirection";
+static NSString * const targetTypeKey = @"targetType";
+static NSString * const boxColorKey = @"dotColor";
+static NSString * const boxSizeKey = @"dotSize";
+static NSString * const speedKey = @"speed";
+static NSString * const sinusoidalKey = @"sinusoidal";
+static NSString * const repetitionsKey = @"repetitions";
+static NSString * const initialPauseKey = @"initialPause";
+static NSString * const finalPauseKey = @"finalPause";
+static NSString * const startPositionKey = @"startPosition";
+static NSString * const endPositionKey = @"endPosition";
+
 @interface HemistimViewController ()
 
 @end
@@ -18,29 +48,81 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //     Do any additional setup after loading the view.
+    
+    //set NavBar as hidden initially, can be shown with tap
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(showHideNavbar:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
+    [self performActivityWithDictionary:self.activity];
 
     
 }
--(void)viewDidAppear:(BOOL)animated {
+
+- (void) performActivityWithDictionary:(NSDictionary *)dictionary {
+    
     UIView *giantView = [[UIView alloc] initWithFrame:CGRectMake(-self.view.frame.size.width, 0, self.view.frame.size.width *3, self.view.frame.size.height)];
-    
-    
     [giantView setBackgroundColor:[UIColor whiteColor]];
-    UIColor *rectangleColor = [UIColor blueColor];
-    float totalRepeats = 500.0;
-    float duration = 2;
-    int numberOfRectangles = 10;
+    [self.view addSubview:giantView];
 
     
     
-    int columns = numberOfRectangles;
-    int rows = numberOfRectangles;
+    CGFloat numberOfBoxes;
+    
+    BoxSize chosenBoxSize = [dictionary[boxSizeKey] integerValue];
+    
+    switch (chosenBoxSize) {
+        case BoxSizeSmallest:
+            numberOfBoxes = 10;
+            break;
+        case BoxSizeSmall:
+            numberOfBoxes = 8;
+            break;
+        case BoxSizeMedium:
+            numberOfBoxes = 6;
+            break;
+        case BoxSizeLarge:
+            numberOfBoxes = 4;
+            break;
+        case BoxSizeLargest:
+            numberOfBoxes = 2;
+            break;
+    }
+    //insert width code here
+    
+    UIColor *backgroundColor;
+    
+    BoxColor chosenBoxColor = [dictionary[boxColorKey] integerValue];
+    
+    switch (chosenBoxColor) {
+        case BoxColorBlue:
+            backgroundColor = [UIColor blueColor];
+            break;
+        case BoxColorGreen:
+            backgroundColor = [UIColor greenColor];
+            break;
+        case BoxColorOrange:
+            backgroundColor = [UIColor orangeColor];
+            break;
+        case BoxColorPurple:
+            backgroundColor = [UIColor purpleColor];
+            break;
+        case BoxColorRed:
+            backgroundColor = [UIColor redColor];
+            break;
+    }
+    
+    UIColor *rectangleColor = backgroundColor;
+    float totalRepeats = 500.0;
+    float duration = 2;
+
+    int columns = numberOfBoxes;
+    int rows = numberOfBoxes;
     float boxWidth = (self.view.frame.size.width) / columns;
     float boxHeight = (self.view.frame.size.height) / rows;
     NSNumber *boxWidthNumber = [NSNumber numberWithFloat:boxWidth];
     
-    [self.view addSubview:giantView];
-
     for (int x = 0; x < rows; x++) {
         for (int i = 0; i < columns * 3 ; i++) {
             if (i % 2 == 0 && x % 2 == 0) {
@@ -66,6 +148,25 @@
     animation.repeatCount = totalRepeats;
     animation.additive = YES;
     [giantView.layer addAnimation:animation forKey:@"shake"];
+    
+}
+
+
+-(void) showHideNavbar:(id) sender
+{
+    // write code to show/hide nav bar here
+    // check if the Navigation Bar is shown
+    if (self.navigationController.navigationBar.hidden == NO)
+    {
+        // hide the Navigation Bar
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
+    // if Navigation Bar is already hidden
+    else if (self.navigationController.navigationBar.hidden == YES)
+    {
+        // Show the Navigation Bar
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
 }
 
 

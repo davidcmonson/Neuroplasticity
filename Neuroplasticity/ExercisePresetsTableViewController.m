@@ -74,6 +74,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text =[NSString stringWithFormat:@"%@",self.activitiesDictionary[self.sectionTitle][indexPath.row][@"identifier"]];
     
+    cell.textLabel.textAlignment = NSTextAlignmentLeft;
+    cell.backgroundColor = [UIColor colorWithRed:(212.0/255.0) green:(110.0/255.0) blue:(234.0/255.0) alpha:1];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:self.view.frame.size.height / 35];
+    cell.imageView.image = [UIImage imageNamed:@"plus"];
+    
     return cell;
 }
 
@@ -92,6 +98,11 @@
     [[PlaylistsController sharedInstance] addExerciseToPlaylist:self.activitiesDictionary[self.indexSection][indexPath.row]];
     NSLog(@"Exercise Added %@", self.activitiesDictionary[self.indexSection][indexPath.row]);
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.view.frame.size.height / 10;
 }
 
 /*

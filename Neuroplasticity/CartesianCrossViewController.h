@@ -10,4 +10,6 @@
 
 @interface CartesianCrossViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *activity;
+
 @end

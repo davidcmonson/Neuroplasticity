@@ -39,9 +39,9 @@
         
         // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController];
-        
+
         // Present the log in view controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
+        [self.navigationController presentViewController:logInViewController animated:NO completion:NULL];
         
     } else {
     [[PlaylistsController sharedInstance] queryForPlaylistsWithCompletion:^(BOOL completion) {
@@ -58,6 +58,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+//-(BOOL)shouldAutorotate {
+//    return NO;
+//}
 
 -(void)viewDidAppear:(BOOL)animated {
     [self.tableView reloadData];
@@ -103,12 +106,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         
     NSString *playlistName = self.playlistsArray[indexPath.row][@"name"];
     NSString *playlistCreationDate = self.playlistsArray[indexPath.row][@"dateCreated"];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",playlistName ,playlistCreationDate];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.backgroundColor = [UIColor colorWithRed:(25.0/255.0) green:(157.0/255.0) blue:(243.0/255.0) alpha:1];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:self.view.frame.size.height / 20];
+    
     
     return cell;
 }
@@ -121,6 +129,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.view.frame.size.height / 8;
 }
 /*
 // Override to support conditional editing of the table view.

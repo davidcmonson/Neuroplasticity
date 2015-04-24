@@ -10,4 +10,6 @@
 
 @interface HemistimViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *activity;
+
 @end

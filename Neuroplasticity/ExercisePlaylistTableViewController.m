@@ -18,7 +18,6 @@
 
 @interface ExercisePlaylistTableViewController ()
 
-
 @end
 
 @implementation ExercisePlaylistTableViewController
@@ -82,6 +81,17 @@
     NSString *exerciseName = self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"identifier"];
     cell.textLabel.text = [NSString stringWithFormat:@"%@",exerciseName];
     
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.backgroundColor = [UIColor colorWithRed:(143.0/255.0) green:(116.0/255.0) blue:(248.0/255.0) alpha:1];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:self.view.frame.size.height / 30];
+    float imageSize = cell.contentView.frame.size.height *.9;
+    
+    UIImageView *cellPlayImage = [[UIImageView alloc] initWithFrame:CGRectMake(cell.contentView.frame.size.width - imageSize - 20, cell.contentView.frame.size.height / 2 - imageSize / 2, imageSize, imageSize)];
+
+    cellPlayImage.image = [UIImage imageNamed:@"play"];
+    [cell.contentView addSubview:cellPlayImage];
+    
     return cell;
 }
 
@@ -91,13 +101,25 @@
     if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"]  isEqual: @"pursuits"]) {
         PursuitsViewController *pursuitsViewController = [PursuitsViewController new];
         pursuitsViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
-        [self.navigationController pushViewController:pursuitsViewController animated:YES];
-    }
-    
-    else if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"] isEqual: @"OPK"]) {
+        [self.navigationController pushViewController:pursuitsViewController animated:NO];
+    } else if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"] isEqual: @"OPK"]) {
         OPKViewController *opkViewController = [OPKViewController new];
-        opkViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];[self.navigationController pushViewController:opkViewController animated:NO];
+        opkViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
+        [self.navigationController pushViewController:opkViewController animated:NO];
+    } else if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"] isEqual: @"hemistim"]) {
+        HemistimViewController *hemistimViewController = [HemistimViewController new];
+        hemistimViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
+        [self.navigationController pushViewController:hemistimViewController animated:NO];
+    } else if ([self.selectedPlaylistObject[@"playlistArray"][indexPath.row][@"exercise"] isEqual: @"cartesianCross"]) {
+        CartesianCrossViewController *cartesianCrossViewController = [CartesianCrossViewController new];
+        cartesianCrossViewController.activity = self.selectedPlaylistObject[@"playlistArray"][indexPath.row];
+        [self.navigationController pushViewController:cartesianCrossViewController animated:NO];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.view.frame.size.height / 10;
 }
 
 

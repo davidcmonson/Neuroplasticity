@@ -69,6 +69,12 @@ static NSString * const endPositionKey = @"endPosition";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //set NavBar as hidden initially, can be shown with tap
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(showHideNavbar:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
     self.view.backgroundColor = [UIColor whiteColor];
 
     
@@ -197,9 +203,35 @@ static NSString * const endPositionKey = @"endPosition";
 
 }
 
+-(void) showHideNavbar:(id) sender
+{
+    // write code to show/hide nav bar here
+    // check if the Navigation Bar is shown
+    if (self.navigationController.navigationBar.hidden == NO)
+    {
+        // hide the Navigation Bar
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
+    // if Navigation Bar is already hidden
+    else if (self.navigationController.navigationBar.hidden == YES)
+    {
+        // Show the Navigation Bar
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+    }
+    [super viewWillDisappear:animated];
 }
 
 /*

@@ -51,7 +51,7 @@ static NSString * const finalPauseKey = @"finalPause";
 static NSString * const startPositionKey = @"startPosition";
 static NSString * const endPositionKey = @"endPosition";
 
-@interface OPKViewController ()
+@interface OPKViewController () <UINavigationBarDelegate>
 
 @end
 
@@ -61,7 +61,15 @@ static NSString * const endPositionKey = @"endPosition";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //set NavBar as hidden initially, can be shown with tap
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(showHideNavbar:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
     [self performActivityWithDictionary:self.activity];
+    
+    
 
 }
 
@@ -76,19 +84,19 @@ static NSString * const endPositionKey = @"endPosition";
     
     switch (chosenStripeSize) {
         case StripeSizeSmallest:
-            rectangleWidth = giantView.bounds.size.width / 50;
+            rectangleWidth = giantView.bounds.size.width / 70;
             break;
         case StripeSizeSmall:
-            rectangleWidth = giantView.bounds.size.width / 40;
+            rectangleWidth = giantView.bounds.size.width / 60;
             break;
         case StripeSizeMedium:
-            rectangleWidth = giantView.bounds.size.width / 30;
+            rectangleWidth = giantView.bounds.size.width / 50;
             break;
         case StripeSizeLarge:
-            rectangleWidth = giantView.bounds.size.width / 20;
+            rectangleWidth = giantView.bounds.size.width / 40;
             break;
         case StripeSizeLargest:
-            rectangleWidth = giantView.bounds.size.width / 10;
+            rectangleWidth = giantView.bounds.size.width / 30;
             break;
     }
     
@@ -171,7 +179,54 @@ static NSString * const endPositionKey = @"endPosition";
         animation.repeatCount = totalRepeats;
         [rectangleView.layer addAnimation:animation forKey:@"position"];
     }
+    float focusDotSize = self.view.frame.size.width / 40;
+    UIView *focusDot = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - focusDotSize / 2, self.view.frame.size.height / 2 - focusDotSize / 2, focusDotSize, focusDotSize)];
+    focusDot.layer.cornerRadius = focusDotSize / 2;
+    focusDot.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:focusDot];
+    
 }
+
+-(void) showHideNavbar:(id) sender
+{
+    // write code to show/hide nav bar here
+    // check if the Navigation Bar is shown
+    if (self.navigationController.navigationBar.hidden == NO)
+    {
+        // hide the Navigation Bar
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }
+    // if Navigation Bar is already hidden
+    else if (self.navigationController.navigationBar.hidden == YES)
+    {
+        // Show the Navigation Bar
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
+}
+
+//-(void) viewWillDisappear:(BOOL)animated {
+//    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+//        // Navigation button was pressed. Do some stuff
+//        [self.navigationController popViewControllerAnimated:NO];
+//        animated = NO;
+//    }
+//    animated = NO;
+//    [super viewWillDisappear:NO];
+//}
+
+//-(BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+//    [self.navigationController setTransitioningDelegate:<#(id<UIViewControllerTransitioningDelegate>)#>
+//    return YES;
+//}
+
+//-(BOOL) navigationShouldPopOnBackButton {
+//    if(needsShowConfirmation) {
+//        // Show confirmation alert
+//        // ...
+//        return NO; // Ignore 'Back' button this time
+//    }
+//    return YES; // Process 'Back' button click and Pop view controler
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

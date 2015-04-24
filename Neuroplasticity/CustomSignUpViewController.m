@@ -17,12 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:nil]]];
+    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginIcon"]]];
     [self.signUpView setBackgroundColor:[UIColor blueColor]];
-    
     [self.signUpView.signUpButton setBackgroundImage:nil forState:UIControlStateNormal];
     [self.signUpView.signUpButton setBackgroundColor:[UIColor blackColor]];
     [self.signUpView.signUpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
     
     
 }

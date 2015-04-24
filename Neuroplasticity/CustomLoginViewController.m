@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.logInView setTintColor:[UIColor blackColor]];
-//    [self.logInView setLogo: [[UIImageView alloc] initWithImage:[UIImage imageNamed:nil]]];
-    [self.logInView setBackgroundColor:[UIColor blueColor]];
+//    [self.logInView setLogo: [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginIcon"]]];
+    [self.logInView setBackgroundColor:[UIColor colorWithRed:25.0/255.0 green:157.0/255.0 blue:243.0/255.0 alpha:1.0]];
     
     self.logInView.signUpButton.backgroundColor = [UIColor whiteColor];
     [self.logInView.signUpButton setBackgroundImage:nil forState:UIControlStateNormal];
@@ -31,13 +31,17 @@
     [self.logInView.logInButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     [self.logInView.passwordForgottenButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
     
-    //    self.titleLabel.text = @"Alpha";
-    //    self.titleLabel.textColor = [UIColor redColor];
-    //    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    //    self.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:24];
+        self.titleLabel.text = @"Neuroplasticity";
+        self.titleLabel.textColor = [UIColor whiteColor];
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        self.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:24];
     
     
+}
+-(BOOL)shouldAutorotate {
+    return NO;
 }
 
 - (void)viewDidLayoutSubviews {
